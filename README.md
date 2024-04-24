@@ -3,7 +3,7 @@ This project is a responsive blog theme template called "Aurum". It is designed 
 
 Features:
 Responsive Design: The theme is designed to be fully responsive, ensuring a consistent user experience across various devices and screen sizes.
-Navigation: The navigation bar includes links to different sections of the website, including a blog section and a search feature. Bootstrap is used for styling the navigation bar.
+Navigation: The navigation bar includes links to different sections of the website, including a blog section. Bootstrap is used for styling the navigation bar.
 Banner Section: The top banner section features a headline, date, description, and social media icons. Flexbox is used for styling the Banner Section.
 
 Cards: The main content section includes multiple cards, each representing a blog post. Bootstrap is used for styling the Article Cards. Grid system is applied to the cards. There are 3 Column and each column has 2 rows on large screen. 2 column and 3 rows on medium screen size and a single Column having full width is shown in small screen.
