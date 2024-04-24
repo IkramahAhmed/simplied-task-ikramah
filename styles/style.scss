@@ -1,0 +1,638 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:active,
+:hover,
+:focus {
+  outline: 0 !important;
+  outline-offset: 0;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+// flexbox
+@mixin flex_property {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+/*===== Variable Define =====*/
+
+/* variables */
+
+$primary-color: #3f3e3e;
+$logo-color: #7d8f97;
+$blog-theme: #b5c0c4;
+$white-color: #fff;
+$text-gray: #e3e3e3;
+$black-color: #000;
+$dark-gray:#363a3d;
+$light-gray:#5f6569;
+$card-para:#364247;
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $primary-color;
+  font-size: 100%;
+  font-weight: 400;
+}
+
+/*
+=========================================
+    Custom Scrollbar
+=========================================
+*/
+
+::-webkit-scrollbar {
+  width: 0.625rem;
+}
+::-webkit-scrollbar-track {
+  background: $white-color;
+}
+::-webkit-scrollbar-thumb {
+  background: $primary-color;
+}
+
+/*
+==========================================
+   Custom CSS Design
+==========================================
+*/
+
+h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 3rem;
+  color: $primary-color;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 2rem;
+  text-transform: capitalize;
+  font-family: $primary-color;
+  color: $primary-color;
+  line-height: 3rem;
+}
+h3 {
+  font-weight: 700;
+  font-size: 2rem;
+  text-transform: capitalize;
+  font-family: $primary-color;
+  color: $primary-color;
+  line-height: 3rem;
+}
+
+h4 {
+  color: $black-color;
+  font-family: $black-color;
+  text-transform: capitalize;
+  font-size: 18px;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  font-size: 1rem;
+  color: $text-gray;
+  font-weight: 400;
+  line-height: 1.75rem;
+  letter-spacing: 1px;
+}
+
+.main-btn:hover {
+  background-color: transparent;
+  color: $primary-color;
+}
+
+.white-btn:hover {
+  background-color: transparent;
+  color: $primary-color;
+  border-color: $primary-color;
+}
+
+.wrapper {
+  padding-top: 8.25rem;
+  padding-bottom: 8.25rem;
+}
+
+.text-content {
+  width: 70%;
+  margin: auto;
+}
+
+/*
+==========================================
+  Section-1  Header Design
+==========================================
+*/
+header {
+  z-index: 1001;
+
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.navigation-wrap {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  z-index: 1000;
+  transition: all 0.3s ease-out;
+  display: flex;
+  padding: 0 2.8rem;
+  background-color: white;
+
+  h3 {
+    color: $logo-color;
+    font-weight: bold;
+    border-right: 1px solid $white-color;
+    padding-right: 1rem;
+  }
+  .blog {
+    color: $blog-theme;
+    font-style: italic;
+    font-size: 18px;
+    font-weight: 500;
+    border-left: 1px solid #ccc;
+    padding: 0px 24px;
+  }
+
+  .nav-item {
+    transition: all 200ms linear;
+    padding: 0.5rem 0.5rem;
+  }
+  .nav-item p {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 17px;
+    color: $logo-color;
+  }
+  .navborder .fa-solid.fa-magnifying-glass {
+    font-size: 1.5rem;
+  }
+  .navborder ::before {
+    border-right: 1px solid #ccc;
+    padding: 12px 24px;
+  }
+
+  .navborder ::before {
+    border-left: 1px solid #ccc;
+  }
+
+  .main-btn {
+    padding: 0.3125rem 1.4375rem;
+    box-shadow: none;
+  }
+
+  .scroll-on {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: $white-color;
+    box-shadow: 0 0.125rem 1.75rem 0 rgb(0, 0, 0, 0.9);
+    transition: all 0.15s ease-in-out 0s;
+  }
+}
+
+.navbar-toggler:focus {
+  outline: unset;
+  border: unset;
+  box-shadow: none;
+}
+
+.nav-link {
+  font-size: 1.9375rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: $primary-color;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  color: $logo-color;
+}
+
+/*
+==========================================
+   Section-2 Banner Design
+==========================================
+*/
+.top-banner {
+  width: 100%;
+  height: 130vh;
+  background: url("https://images.unsplash.com/photo-1534088568595-a066f410bcda?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGNsb3VkfGVufDB8fDB8fHww")
+    no-repeat center;
+  background-size: cover;
+  padding: 8.875rem 2.8rem;
+}
+
+.banner-heading {
+  @include flex_property();
+  padding-top: 100px;
+
+
+  .head {
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    color: $white-color;
+  }
+  .card-icon-banner {
+    margin-top: 50px;
+  }
+
+  .card-icon-banner .read {
+    color: $white-color;
+  }
+  h1 {
+    color: $white-color;
+    font-size: 65px;
+  }
+  :first-child {
+    color: $text-gray;
+    font-weight: 900;
+  }
+  .card-icon2-banner p {
+    color: $white-color;
+    padding: 0 10px;
+  }
+  .card-icon2-banner p i {
+    color: $text-gray;
+  }
+}
+.text-banner {
+  font-size: 22px;
+  color: $white-color;
+  width: 50%;
+  line-height: 30px;
+  color: $text-gray;
+}
+
+
+
+/*
+==========================================
+   Section-3 Card Design
+==========================================
+*/
+.cards {
+  margin-top: -15vh;
+  padding: 0 2rem;
+}
+.card-icon-banner {
+  display: flex;
+}
+.card-icon2-banner p {
+  color: $white-color;
+}
+.card-icon2-banner {
+  display: flex;
+  padding: 0 50px;
+}
+.banner-heading h2 {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 3rem;
+  color: $white-color;
+}
+.card-text {
+  font-size: 20px;
+  color: $light-gray;
+}
+
+
+
+
+
+.card-img-top-2 {
+  height: 400px; 
+}
+.card-body {
+  padding: 35px;
+
+  .date{
+    color: $logo-color;
+    font-weight: bold;
+  }
+  h3{
+    font-size: 26px;
+    color: $card-para;
+  }
+}
+.card-icon {
+  display: flex;
+  justify-content: space-between;
+
+  .read{
+    color: $dark-gray;
+    font-weight: 500;
+  }
+  i{
+    color: $light-gray;
+  }
+}
+
+
+.card-icon-2{
+  display: flex;
+  padding-left: 3px;
+
+p{
+    color: $light-gray;
+    font-weight: bold;
+}
+  .fa-solid.fa-heart {
+    color: $blog-theme;
+  }
+  .fa-solid.fa-message {
+    color: $blog-theme;
+  }
+}
+.card-icon-2 p:first-child {
+  padding-right: 9px;
+}
+
+
+
+
+// ==========================================
+// Section-4 .Load_More_Articles
+// ==========================================
+
+.Load_More_Articles {
+    
+  color: $dark-gray;
+  text-align: center;
+  font-size: 20px;
+  margin:50px 0;
+  font-weight: bold;
+
+  .fa-solid.fa-arrow-right {
+    color: rgb(185, 185, 185);
+  }
+}
+
+
+// ==========================================
+// Section-5 footer section Design
+// ==========================================
+
+.footer {
+  background-color: $dark-gray;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+
+  .footer-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .text-light {
+    color: $white-color;
+    font-weight: bold;
+    margin: 0;
+  }
+  .social-icons {
+    display: flex;
+
+    a {
+        margin-right: 10px;
+
+        i {
+            font-size: 1.5rem;
+            color:  $dark-gray;
+            padding: 10px;
+            border-radius: 50%;
+            background-color: $light-gray;
+            margin: 2px;
+          }
+      }
+  }
+  
+}
+
+
+
+
+
+
+
+
+//meduim device
+@media (max-width: 998px) {
+  // navbar
+  .navigation-wrap h3 {
+    color: $logo-color;
+    font-weight: bold;
+    border-right: none;
+    padding-right: 1rem;
+  }
+
+  // banner
+  .banner-heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 50px;
+        padding-top: 100px;
+
+    h1 {
+      color: $white-color;
+      font-size: 35px;
+    }
+
+    .text-banner {
+      font-size: 20px;
+      color: $white-color;
+      width: 70%;
+      line-height: 30px;
+      color: $text-gray;
+    }
+  }
+  .top-banner {
+    width: 100%;
+    height: 130vh;
+   
+    background: url("https://images.unsplash.com/photo-1534088568595-a066f410bcda?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGNsb3VkfGVufDB8fDB8fHww")
+      no-repeat center;
+    background-size: cover;
+    padding: 8.875rem 0 9.375rem;
+  }
+}
+
+@media (max-width: 768px) {
+  /* navbar */
+  .navigation-wrap h3 {
+    color: $logo-color;
+    font-weight: bold;
+    border-right: none;
+    padding-right: 1rem;
+  }
+
+  .footer .footer-text {
+    flex-direction: column;
+    align-items: center;
+
+    .social-icons {
+      margin-top: 20px;
+    }
+  }
+
+  .card-img-top-2 {
+    height: 100%; 
+  }
+
+  
+}
+
+/*  Banner */
+.banner-heading {
+//   padding-top: 100px;
+
+  .banner-heading .head {
+    font-size: 2.2rem;
+    font-weight: 900;
+    margin-bottom: 3rem;
+    color: $white-color;
+  }
+  .card-text-banner {
+    font-size: 22px;
+    color: $text-gray;
+    width: 70%;
+  }
+}
+
+
+@media only screen and (max-width: 600px) {
+  // navbar
+  .navigation-wrap {
+    padding: 0 0.5rem;
+  }
+  .navigation-wrap h3 {
+    color: $logo-color;
+    font-weight: bold;
+    border-right: none;
+    padding-right: 1rem;
+  }
+  .arum {
+    font-size: 14px;
+  }
+  .toggle-col-2 button {
+    font-size: 0.975rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: var(--primary-color);
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+  }
+  .nav-link {
+    font-size: 0.975rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: var(--primary-color);
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+  }
+
+  /* banner */
+  .banner-heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 50px;
+    padding-top: 10px;
+
+    .head {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 3rem;
+      color: $white-color;
+    }
+
+    .card-icon-banner {
+      margin-top: 30px;
+    }
+
+    .card-icon-banner .read {
+      color: $white-color;
+      font-size: 11px;
+    }
+    h1 {
+      color: $white-color;
+      font-size: 65px;
+    }
+    :first-child {
+      color: $text-gray;
+      font-weight: 900;
+    }
+    .card-icon2-banner p {
+      color: $white-color;
+      font-size: 11px;
+      padding: 0 4px;
+    }
+    .card-icon2-banner p i {
+      color: $text-gray;
+    }
+
+    h1 {
+      color: $white-color;
+      font-size: 30px;
+    }
+    .text-banner {
+      font-size: 15px;
+      color: $white-color;
+      width: 100%;
+      line-height: 30px;
+      color: $text-gray;
+    }
+  }
+  .top-banner {
+    width: 100%;
+    height: 130vh;
+  }
+
+  /* footer */
+  .footer .social-icons a i {
+    font-size: 1rem;
+    color:  $dark-gray;
+    padding: 9px;
+    border-radius: 50%;
+    background-color: $light-gray;
+    margin: 2px;
+  }
+}
+

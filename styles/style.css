@@ -1,0 +1,557 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:active,
+:hover,
+:focus {
+  outline: 0 !important;
+  outline-offset: 0;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+/*===== Variable Define =====*/
+/* variables */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: #3f3e3e;
+  font-size: 100%;
+  font-weight: 400;
+}
+
+/*
+=========================================
+    Custom Scrollbar
+=========================================
+*/
+::-webkit-scrollbar {
+  width: 0.625rem;
+}
+
+::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3f3e3e;
+}
+
+/*
+==========================================
+   Custom CSS Design
+==========================================
+*/
+h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 3rem;
+  color: #3f3e3e;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 2rem;
+  text-transform: capitalize;
+  font-family: #3f3e3e;
+  color: #3f3e3e;
+  line-height: 3rem;
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 2rem;
+  text-transform: capitalize;
+  font-family: #3f3e3e;
+  color: #3f3e3e;
+  line-height: 3rem;
+}
+
+h4 {
+  color: #000;
+  font-family: #000;
+  text-transform: capitalize;
+  font-size: 18px;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  font-size: 1rem;
+  color: #e3e3e3;
+  font-weight: 400;
+  line-height: 1.75rem;
+  letter-spacing: 1px;
+}
+
+.main-btn:hover {
+  background-color: transparent;
+  color: #3f3e3e;
+}
+
+.white-btn:hover {
+  background-color: transparent;
+  color: #3f3e3e;
+  border-color: #3f3e3e;
+}
+
+.wrapper {
+  padding-top: 8.25rem;
+  padding-bottom: 8.25rem;
+}
+
+.text-content {
+  width: 70%;
+  margin: auto;
+}
+
+/*
+==========================================
+  Section-1  Header Design
+==========================================
+*/
+header {
+  z-index: 1001;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.navigation-wrap {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  z-index: 1000;
+  transition: all 0.3s ease-out;
+  display: flex;
+  padding: 0 2.8rem;
+  background-color: white;
+}
+.navigation-wrap h3 {
+  color: #7d8f97;
+  font-weight: bold;
+  border-right: 1px solid #fff;
+  padding-right: 1rem;
+}
+.navigation-wrap .blog {
+  color: #b5c0c4;
+  font-style: italic;
+  font-size: 18px;
+  font-weight: 500;
+  border-left: 1px solid #ccc;
+  padding: 0px 24px;
+}
+.navigation-wrap .nav-item {
+  transition: all 200ms linear;
+  padding: 0.5rem 0.5rem;
+}
+.navigation-wrap .nav-item p {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 17px;
+  color: #7d8f97;
+}
+.navigation-wrap .navborder .fa-solid.fa-magnifying-glass {
+  font-size: 1.5rem;
+}
+.navigation-wrap .navborder ::before {
+  border-right: 1px solid #ccc;
+  padding: 12px 24px;
+}
+.navigation-wrap .navborder ::before {
+  border-left: 1px solid #ccc;
+}
+.navigation-wrap .main-btn {
+  padding: 0.3125rem 1.4375rem;
+  box-shadow: none;
+}
+.navigation-wrap .scroll-on {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 0.125rem 1.75rem 0 rgba(0, 0, 0, 0.9);
+  transition: all 0.15s ease-in-out 0s;
+}
+
+.navbar-toggler:focus {
+  outline: unset;
+  border: unset;
+  box-shadow: none;
+}
+
+.nav-link {
+  font-size: 1.9375rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: #3f3e3e;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  color: #7d8f97;
+}
+
+/*
+==========================================
+   Section-2 Banner Design
+==========================================
+*/
+.top-banner {
+  width: 100%;
+  height: 130vh;
+  background: url("https://images.unsplash.com/photo-1534088568595-a066f410bcda?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGNsb3VkfGVufDB8fDB8fHww") no-repeat center;
+  background-size: cover;
+  padding: 8.875rem 2.8rem;
+}
+
+.banner-heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 100px;
+}
+.banner-heading .head {
+  font-size: 3.2rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  color: #fff;
+}
+.banner-heading .card-icon-banner {
+  margin-top: 50px;
+}
+.banner-heading .card-icon-banner .read {
+  color: #fff;
+}
+.banner-heading h1 {
+  color: #fff;
+  font-size: 65px;
+}
+.banner-heading :first-child {
+  color: #e3e3e3;
+  font-weight: 900;
+}
+.banner-heading .card-icon2-banner p {
+  color: #fff;
+  padding: 0 10px;
+}
+.banner-heading .card-icon2-banner p i {
+  color: #e3e3e3;
+}
+
+.text-banner {
+  font-size: 22px;
+  color: #fff;
+  width: 50%;
+  line-height: 30px;
+  color: #e3e3e3;
+}
+
+/*
+==========================================
+   Section-3 Card Design
+==========================================
+*/
+.cards {
+  margin-top: -15vh;
+  padding: 0 2rem;
+}
+
+.card-icon-banner {
+  display: flex;
+}
+
+.card-icon2-banner p {
+  color: #fff;
+}
+
+.card-icon2-banner {
+  display: flex;
+  padding: 0 50px;
+}
+
+.banner-heading h2 {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 3rem;
+  color: #fff;
+}
+
+.card-text {
+  font-size: 20px;
+  color: #5f6569;
+}
+
+.card-img-top-2 {
+  height: 400px;
+}
+
+.card-body {
+  padding: 35px;
+}
+.card-body .date {
+  color: #7d8f97;
+  font-weight: bold;
+}
+.card-body h3 {
+  font-size: 26px;
+  color: #364247;
+}
+
+.card-icon {
+  display: flex;
+  justify-content: space-between;
+}
+.card-icon .read {
+  color: #363a3d;
+  font-weight: 500;
+}
+.card-icon i {
+  color: #5f6569;
+}
+
+.card-icon-2 {
+  display: flex;
+  padding-left: 3px;
+}
+.card-icon-2 p {
+  color: #5f6569;
+  font-weight: bold;
+}
+.card-icon-2 .fa-solid.fa-heart {
+  color: #b5c0c4;
+}
+.card-icon-2 .fa-solid.fa-message {
+  color: #b5c0c4;
+}
+
+.card-icon-2 p:first-child {
+  padding-right: 9px;
+}
+
+.Load_More_Articles {
+  color: #363a3d;
+  text-align: center;
+  font-size: 20px;
+  margin: 50px 0;
+  font-weight: bold;
+}
+.Load_More_Articles .fa-solid.fa-arrow-right {
+  color: rgb(185, 185, 185);
+}
+
+.footer {
+  background-color: #363a3d;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+.footer .footer-text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer .text-light {
+  color: #fff;
+  font-weight: bold;
+  margin: 0;
+}
+.footer .social-icons {
+  display: flex;
+}
+.footer .social-icons a {
+  margin-right: 10px;
+}
+.footer .social-icons a i {
+  font-size: 1.5rem;
+  color: #363a3d;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: #5f6569;
+  margin: 2px;
+}
+
+@media (max-width: 998px) {
+  .navigation-wrap h3 {
+    color: #7d8f97;
+    font-weight: bold;
+    border-right: none;
+    padding-right: 1rem;
+  }
+  .banner-heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 50px;
+    padding-top: 100px;
+  }
+  .banner-heading h1 {
+    color: #fff;
+    font-size: 35px;
+  }
+  .banner-heading .text-banner {
+    font-size: 20px;
+    color: #fff;
+    width: 70%;
+    line-height: 30px;
+    color: #e3e3e3;
+  }
+  .top-banner {
+    width: 100%;
+    height: 130vh;
+    background: url("https://images.unsplash.com/photo-1534088568595-a066f410bcda?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGNsb3VkfGVufDB8fDB8fHww") no-repeat center;
+    background-size: cover;
+    padding: 8.875rem 0 9.375rem;
+  }
+}
+@media (max-width: 768px) {
+  /* navbar */
+  .navigation-wrap h3 {
+    color: #7d8f97;
+    font-weight: bold;
+    border-right: none;
+    padding-right: 1rem;
+  }
+  .footer .footer-text {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer .footer-text .social-icons {
+    margin-top: 20px;
+  }
+  .card-img-top-2 {
+    height: 100%;
+  }
+}
+/*  Banner */
+.banner-heading .banner-heading .head {
+  font-size: 2.2rem;
+  font-weight: 900;
+  margin-bottom: 3rem;
+  color: #fff;
+}
+.banner-heading .card-text-banner {
+  font-size: 22px;
+  color: #e3e3e3;
+  width: 70%;
+}
+
+@media only screen and (max-width: 600px) {
+  .navigation-wrap {
+    padding: 0 0.5rem;
+  }
+  .navigation-wrap h3 {
+    color: #7d8f97;
+    font-weight: bold;
+    border-right: none;
+    padding-right: 1rem;
+  }
+  .arum {
+    font-size: 14px;
+  }
+  .toggle-col-2 button {
+    font-size: 0.975rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: var(--primary-color);
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+  }
+  .nav-link {
+    font-size: 0.975rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: var(--primary-color);
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+  }
+  /* banner */
+  .banner-heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 50px;
+    padding-top: 10px;
+  }
+  .banner-heading .head {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    color: #fff;
+  }
+  .banner-heading .card-icon-banner {
+    margin-top: 30px;
+  }
+  .banner-heading .card-icon-banner .read {
+    color: #fff;
+    font-size: 11px;
+  }
+  .banner-heading h1 {
+    color: #fff;
+    font-size: 65px;
+  }
+  .banner-heading :first-child {
+    color: #e3e3e3;
+    font-weight: 900;
+  }
+  .banner-heading .card-icon2-banner p {
+    color: #fff;
+    font-size: 11px;
+    padding: 0 4px;
+  }
+  .banner-heading .card-icon2-banner p i {
+    color: #e3e3e3;
+  }
+  .banner-heading h1 {
+    color: #fff;
+    font-size: 30px;
+  }
+  .banner-heading .text-banner {
+    font-size: 15px;
+    color: #fff;
+    width: 100%;
+    line-height: 30px;
+    color: #e3e3e3;
+  }
+  .top-banner {
+    width: 100%;
+    height: 130vh;
+  }
+  /* footer */
+  .footer .social-icons a i {
+    font-size: 1rem;
+    color: #363a3d;
+    padding: 9px;
+    border-radius: 50%;
+    background-color: #5f6569;
+    margin: 2px;
+  }
+}/*# sourceMappingURL=style.css.map */
