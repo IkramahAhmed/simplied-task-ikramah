@@ -498,7 +498,7 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 0 50px;
+    padding: 0 40px;
     padding-top: 10px;
   }
   .banner-heading .head {
